@@ -1,0 +1,10 @@
+<div class="container-fluid container-articles">
+    <div class="row row-articles grid">
+        {{#each articles}}
+        <div class="col col-sm-3 col-single-article">
+            <h3 data-obj-id="{{_id}}">{{title}}</h3>
+            <p>{{date}}</p>
+        </div>
+        {{/each}}
+    </div>
+</div>
