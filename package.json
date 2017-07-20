@@ -1,0 +1,41 @@
+{
+  "name": "mongo-scraper",
+  "version": "1.0.0",
+  "description": "A web-app that utilizes mongoDB to scrape news articles and allows users to save/delete/comment on the articles they saved.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kndelacerda/mongo-scraper.git"
+  },
+  "keywords": [
+    "mongo",
+    "mongoDB",
+    "mongoD",
+    "scraper",
+    "scrape",
+    "news"
+  ],
+  "author": "Kristen De La Cerda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kndelacerda/mongo-scraper/issues"
+  },
+  "homepage": "https://github.com/kndelacerda/mongo-scraper#readme",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "hbs": "^4.0.1",
+    "jquery": "^3.2.1",
+    "mongodb": "^2.2.30",
+    "mongoose": "^4.11.3",
+    "morgan": "^1.8.2",
+    "request": "^2.81.0",
+    "winston": "^2.3.1"
+  }
+}
