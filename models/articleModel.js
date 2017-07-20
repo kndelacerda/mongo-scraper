@@ -1,9 +1,9 @@
 const mongoose = require("mongoose"),
-    express = require("express");
+    express = require('express');
 
 const app = express();
 
-// Creates a Schema class with Mongoose
+// Creates a Schema class with mongoose
 var Schema = mongoose.Schema;
 
 var ArticleSchema = new Schema({
@@ -11,7 +11,7 @@ var ArticleSchema = new Schema({
         type: String,
         trim: true,
         unique: true,
-        required: "A Title is required"
+        required: "title is required"
     },
     date: {
         type: String,
@@ -59,7 +59,7 @@ ArticleSchema.methods.viewNotes = function(req, res, Note, article) {
     return this.model('Article')
         .find({ _id: req.query.articleID })
         .exec(function(err, data) {
-            console.log("viewNotes exec fired");
+            console.log('viewNotes exec fired');
             console.log(data);
             Note.find({ _id: { $in: data[0].notes } })
                 .sort({ created: -1 })
@@ -73,6 +73,8 @@ ArticleSchema.methods.viewNotes = function(req, res, Note, article) {
                 });
         });
 };
+
+
 
 var Article = mongoose.model("Article", ArticleSchema);
 
